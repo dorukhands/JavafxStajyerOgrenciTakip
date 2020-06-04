@@ -1,0 +1,31 @@
+.root{
+	-fx-background-color:#4589B0;
+	-fx-font-size:11px;
+	
+}
+.Button{
+	-fx-text-fill:darkred;
+	-fx-background-color:linear-gradient(#3E4651,#282830);
+	-fx-text-fill:#ffffff;
+	-fx-background-radius:4;
+	-fx-border-width: 2;
+}
+
+.Label{
+	-fx-text-fill:#ffffff;
+	-fx-background-color:#000000;  
+	 -fx-font-size: 10pt;
+	-fx-opacity: 0.7;
+	}
+	
+	.TableView {
+    -fx-base: #3B3C3D;
+    -fx-control-inner-background: #3B3C3D;
+    -fx-background-color: #3B3C3D;
+    -fx-table-header-border-color: transparent;
+}
+
+.TextField {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Times New Roman";
+}

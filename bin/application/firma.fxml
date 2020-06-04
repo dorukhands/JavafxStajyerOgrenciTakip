@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="519.0" prefWidth="581.0" styleClass="root" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MailController">
+   <children>
+      <Label layoutX="78.0" layoutY="61.0" styleClass="Label" stylesheets="@application.css" text="Kime:" />
+      <Label layoutX="78.0" layoutY="104.0" styleClass="Label" stylesheets="@application.css" text="Konu:" />
+      <Label layoutX="78.0" layoutY="147.0" styleClass="Label" stylesheets="@application.css" text="Mesaj:" />
+      <TextField fx:id="txtMail" layoutX="118.0" layoutY="57.0" styleClass="TextField" stylesheets="@application.css" />
+      <TextField fx:id="txtSubject" layoutX="118.0" layoutY="100.0" styleClass="TextField" stylesheets="@application.css" />
+      <TextArea fx:id="txtMessage" layoutX="118.0" layoutY="147.0" prefHeight="176.0" prefWidth="426.0" />
+      <Button fx:id="btnMail" layoutX="163.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#btnSend" prefHeight="25.0" prefWidth="104.0" styleClass="Button" stylesheets="@application.css" text="Send" />
+   </children>
+</AnchorPane>

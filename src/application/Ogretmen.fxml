@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="567.0" prefWidth="1121.0" style="-fx-background-color: #25373D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OgretmenController">
+   <children>
+      <AnchorPane layoutY="6.0" prefHeight="567.0" prefWidth="219.0" style="-fx-background-color: #E3000E;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="24.0" layoutY="411.0" mnemonicParsing="false" onAction="#Add_users" prefHeight="32.0" prefWidth="162.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE" />
+            <Button layoutX="24.0" layoutY="467.0" mnemonicParsing="false" onAction="#Edit" prefHeight="32.0" prefWidth="162.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE" />
+            <Button layoutX="24.0" layoutY="521.0" mnemonicParsing="false" onAction="#Delete" prefHeight="32.0" prefWidth="162.0" style="-fx-background-color: blue;" text="Delete" textFill="WHITE" />
+            <TextField fx:id="txt_username" layoutX="24.0" layoutY="52.0" onKeyReleased="#search_user" prefHeight="25.0" prefWidth="173.0" promptText="Username" styleClass="TextField" stylesheets="@application.css" />
+            <TextField fx:id="txt_surname" layoutX="24.0" layoutY="84.0" prefHeight="25.0" prefWidth="173.0" promptText="surname" styleClass="TextField" stylesheets="@application.css" />
+            <TextField fx:id="txt_email" layoutX="24.0" layoutY="117.0" prefHeight="32.0" prefWidth="173.0" promptText="email" styleClass="TextField" stylesheets="@application.css" />
+            <TextField fx:id="txt_ogrno" layoutX="25.0" layoutY="158.0" prefHeight="32.0" prefWidth="173.0" promptText="Ogrenci No" styleClass="TextField" stylesheets="@application.css" />
+            <TextField fx:id="txt_id" layoutX="24.0" layoutY="21.0" prefHeight="25.0" prefWidth="173.0" promptText="ID" styleClass="TextField" stylesheets="@application.css" />
+            <TextField fx:id="txt_sınıf" layoutX="24.0" layoutY="198.0" prefHeight="32.0" prefWidth="173.0" promptText="Sınıf" styleClass="TextField" stylesheets="@application.css" />
+            <RadioButton layoutX="79.0" layoutY="347.0" mnemonicParsing="false" text="E" textFill="#f1e9e9">
+               <toggleGroup>
+                  <ToggleGroup fx:id="cinsiyet" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="120.0" layoutY="347.0" mnemonicParsing="false" text="K" textFill="#f1e9e9" toggleGroup="$cinsiyet" />
+            <Label layoutX="24.0" layoutY="347.0" text="Cinsiyet:" textFill="#f1e9e9" />
+            <Label layoutX="24.0" layoutY="371.0" text="Staj onay:" textFill="#f1e9e9" />
+            <RadioButton layoutX="79.0" layoutY="371.0" mnemonicParsing="false" text="Kabul" textFill="#f1e9e9">
+               <toggleGroup>
+                  <ToggleGroup fx:id="stajDurum" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="134.0" layoutY="371.0" mnemonicParsing="false" text="Red" textFill="#f1e9e9" toggleGroup="$stajDurum" />
+            <ComboBox fx:id="cmb_Bolum" layoutX="67.0" layoutY="263.0" prefHeight="25.0" prefWidth="128.0" promptText="Bölüm" />
+            <ComboBox fx:id="cmb_Fakulte" layoutX="67.0" layoutY="296.0" prefHeight="25.0" prefWidth="128.0" promptText="Fakülte" />
+            <Label layoutX="20.0" layoutY="268.0" text="Bölüm:" textFill="#f1e9e9" />
+            <Label layoutX="15.0" layoutY="300.0" text="Fakülte:" textFill="#f1e9e9" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_users" layoutX="218.0" layoutY="93.0" onMouseClicked="#getSelected" prefHeight="474.0" prefWidth="903.0" style="-fx-background-color: #9E9D9B;" styleClass="TableView" stylesheets="@application.css">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="44.0" text="ID" />
+          <TableColumn fx:id="col_username" prefWidth="98.0" text="Username" />
+            <TableColumn fx:id="col_surname" prefWidth="93.0" text="Surname" />
+            <TableColumn fx:id="col_email" prefWidth="87.0" text="Email" />
+            <TableColumn fx:id="col_ogrno" prefWidth="88.0" text="OgrenciNo" />
+            <TableColumn fx:id="col_sınıf" minWidth="0.0" prefWidth="70.0" text="Sınıf" />
+            <TableColumn fx:id="col_cinsiyet" prefWidth="53.0" text="Cinsiyet" />
+            <TableColumn fx:id="col_onaydurum" prefWidth="84.0" text="OnayDurumu" />
+            <TableColumn fx:id="col_bolum" prefWidth="130.0" text="Bölüm" />
+            <TableColumn fx:id="col_fakulte" prefWidth="144.0" text="Fakülte" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="443.0" layoutY="44.0" prefHeight="32.0" prefWidth="135.0" promptText="Search" />
+      <Label layoutX="390.0" layoutY="48.0" text="Arama:" textFill="WHITE" />
+   </children>
+</AnchorPane>
